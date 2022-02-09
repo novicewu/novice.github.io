@@ -1,0 +1,20 @@
+# WoW Classic 70
+# Environment
+# Debian
+apt -y install zlibc
+apt -y install grep build-essential gcc g++ automake git-core autoconf make patch cmake libmariadb-dev libmariadb-dev-compat mariadb-server libtool libssl-dev binutils libc6 libbz2-dev subversion libboost-all-dev
+Installation & Compilation
+useradd -m -d /home/mangos -c "MaNGOS" -U mangos
+
+cd /home/mangos
+git clone git://github.com/cmangos/mangos-tbc.git mangos
+git clone git://github.com/cmangos/tbc-db.git
+
+# Directory structure
+# Now you should have the following subfolders:
+# mangos (containing the sources of CMaNGOS)
+# classic-db OR tbc-db OR wotlk-db OR Database containing the content of your database-provider
+
+mkdir /home/mangos/build
+mkdir /home/mangos/run
+cd /home/mangos/build
